@@ -40,8 +40,11 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  overscroll-behavior-y: contain;
+  position: relative;
+  height: 100%;
 }
 
 body {
@@ -1290,12 +1293,14 @@ form {
 }
 
 .stats-container {
-  max-width: 1200px;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 20px;
+  overflow-x: hidden;
 }
 
 .stat-item {
@@ -1317,38 +1322,38 @@ form {
   margin-bottom: 15px;
 }
 
-@media (max-width: 480px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+@media (max-width: 992px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 
-  .service-card {
-    padding: 20px 15px;
+  .stat-item {
+    padding: 20px 10px;
   }
+}
 
-  .service-icon-container {
-    width: 60px;
-    height: 60px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .animated-text {
-    font-size: 1.8rem;
-    min-height: 50px;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
+@media (max-width: 576px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    width: 100%;
   }
 
-  .cta-button {
-    width: 100%;
+  .stat-item {
+    padding: 15px 8px;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
   }
 }
 
