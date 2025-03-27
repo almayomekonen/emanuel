@@ -31,6 +31,22 @@ const Process = () => {
     },
   ];
 
+  // Function to scroll to contact section
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("צור קשר");
+    if (contactSection) {
+      const headerOffset = 80;
+      const elementPosition = contactSection.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -93,6 +109,7 @@ const Process = () => {
           <h3>מוכן להתחיל?</h3>
           <motion.button
             className="cta-button primary"
+            onClick={scrollToContact}
             whileHover={{
               scale: 1.05,
               boxShadow: "0 10px 25px rgba(67, 97, 238, 0.5)",

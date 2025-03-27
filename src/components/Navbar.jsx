@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -16,6 +15,24 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Function to handle smooth scroll and close menu
+  const handleNavClick = (id) => {
+    setMenuOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      // Add offset for fixed header
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <motion.nav
       className={`navbar ${scrolled ? "scrolled" : ""}`}
@@ -28,6 +45,7 @@ const Navbar = () => {
           className="logo"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={() => handleNavClick("ראשי")}
         >
           <span className="logo-text">עמנואל אינגדאו</span>
           <span className="logo-subtitle">סוכן ביטוח מורשה</span>
@@ -38,7 +56,7 @@ const Navbar = () => {
             (item, index) => (
               <motion.a
                 key={index}
-                href={`#${item}`}
+                onClick={() => handleNavClick(item)}
                 whileHover={{ scale: 1.1, color: "var(--primary)" }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -75,8 +93,7 @@ const Navbar = () => {
               (item, index) => (
                 <motion.a
                   key={index}
-                  href={`#${item}`}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => handleNavClick(item)}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}

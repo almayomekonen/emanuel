@@ -8,6 +8,22 @@ const Services = () => {
     threshold: 0.1,
   });
 
+  // Function to scroll to contact section
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("צור קשר");
+    if (contactSection) {
+      const headerOffset = 80;
+      const elementPosition = contactSection.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const services = [
     {
       icon: "🚗",
@@ -108,8 +124,10 @@ const Services = () => {
                   backgroundColor: service.color,
                   color: "white",
                 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={scrollToContact}
               >
-                קרא עוד
+                קבל הצעה
               </motion.button>
             </motion.div>
           ))}

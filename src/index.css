@@ -1316,3 +1316,160 @@ form {
   font-size: 2.5rem;
   margin-bottom: 15px;
 }
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 20px 15px;
+  }
+
+  .service-icon-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .animated-text {
+    font-size: 1.8rem;
+    min-height: 50px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}
+
+/* Improved mobile menu */
+.mobile-menu {
+  max-height: calc(100vh - 70px);
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 10px 10px;
+  z-index: 1000;
+}
+
+.mobile-menu a {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Enhanced touch interactions */
+button,
+a,
+.service-card,
+.process-step,
+.interest-option,
+.social-icon {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.testimonial-navigation {
+  margin-top: 20px;
+}
+
+.dot,
+.arrow {
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Improve form on mobile */
+@media (max-width: 480px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 25px 15px;
+    margin-bottom: 20px;
+  }
+
+  .contact-form-container {
+    padding: 25px 15px;
+  }
+
+  .interest-options {
+    grid-template-columns: 1fr;
+  }
+
+  .advantage-tag {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
+
+/* Make footer stack properly on very small screens */
+@media (max-width: 360px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links-column h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .contact-list li {
+    justify-content: center;
+  }
+}
+
+/* Fast click response */
+.cta-button,
+.submit-button,
+.service-button,
+.interest-option,
+.social-icon,
+.arrow,
+.dot {
+  touch-action: manipulation;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Improve accessibility */
+button,
+a,
+[role="button"] {
+  outline: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Fix touch scrolling issues */
+html,
+body {
+  overscroll-behavior-y: contain;
+  position: relative;
+  height: 100%;
+}

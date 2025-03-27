@@ -3,6 +3,38 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
+  // Function to scroll to contact section
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("צור קשר");
+    if (contactSection) {
+      const headerOffset = 80;
+      const elementPosition = contactSection.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  // Function to scroll to services section
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById("שירותים");
+    if (servicesSection) {
+      const headerOffset = 80;
+      const elementPosition = servicesSection.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section className="hero" id="ראשי">
       <div className="hero-container">
@@ -42,6 +74,7 @@ const Hero = () => {
           <div className="cta-buttons">
             <motion.button
               className="cta-button primary"
+              onClick={scrollToContact}
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 10px 25px rgba(67, 97, 238, 0.5)",
@@ -52,6 +85,7 @@ const Hero = () => {
             </motion.button>
             <motion.button
               className="cta-button secondary"
+              onClick={scrollToServices}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
