@@ -32,6 +32,12 @@
   --radius-full: 9999px;
 }
 
+#root {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -42,9 +48,14 @@
 
 html,
 body {
-  overscroll-behavior-y: contain;
+  overflow-x: hidden;
   position: relative;
-  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  overflow-x: clip; /* Modern alternative to hidden that prevents repaints */
 }
 
 body {
