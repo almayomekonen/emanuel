@@ -46,12 +46,9 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html,
-body {
+html {
   overflow-x: hidden;
-  position: relative;
   width: 100%;
-  max-width: 100%;
 }
 
 body {
@@ -59,10 +56,10 @@ body {
 }
 
 body {
-  background-color: #f8f9fc;
-  color: var(--dark);
-  line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: visible; /* Change from clip/hidden to visible */
+  position: relative;
+  width: 100%;
+  max-width: 100%;
 }
 
 a {
