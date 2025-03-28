@@ -11,33 +11,38 @@ const Testimonials = () => {
     threshold: 0.1,
   });
 
+  // Using UI Avatars or Dicebear for real-looking avatar images
   const testimonials = [
     {
       text: "עמנואל הציל אותי ממש! מצא לי פוליסה מעולה ב-40% פחות ממה ששילמתי קודם. הוא תמיד זמין לשאלות ונותן שירות מעולה.",
       name: "דניאל כהן",
       position: "לקוח פרטי",
-      avatar: "/avatar1.jpg",
+      avatar:
+        "https://api.dicebear.com/7.x/micah/svg?seed=Daniel&backgroundColor=4361ee&scale=80",
       rating: 5,
     },
     {
       text: "מקצועיות ושירות מעולים. עמנואל עזר לי להבין בדיוק מה אני קונה ולא שילמתי על כיסויים מיותרים. ממליץ בחום!",
       name: "שרה לוי",
       position: "עצמאית",
-      avatar: "/avatar2.jpg",
+      avatar:
+        "https://api.dicebear.com/7.x/micah/svg?seed=Sarah&backgroundColor=4cc9f0&scale=80&gender=female",
       rating: 5,
     },
     {
       text: "אחרי תאונה קיבלתי ליווי צמוד בכל תהליך התביעה. עמנואל פשוט סוכן ביטוח מהשורה הראשונה! לא יכולתי לבקש ליווי טוב יותר.",
       name: "מיכאל אברמוב",
       position: "לקוח פרטי",
-      avatar: "/avatar3.jpg",
+      avatar:
+        "https://api.dicebear.com/7.x/micah/svg?seed=Michael&backgroundColor=3a0ca3&scale=80",
       rating: 5,
     },
     {
       text: "עמנואל הוא מקצוען אמיתי. הוא הבין את הצרכים שלי והתאים לי את הפוליסה המושלמת. אני סומכת עליו בעיניים עצומות.",
       name: "רונית לביא",
       position: "מנהלת חברה",
-      avatar: "/avatar4.jpg",
+      avatar:
+        "https://api.dicebear.com/7.x/micah/svg?seed=Ronit&backgroundColor=4895ef&scale=80&gender=female",
       rating: 5,
     },
   ];
