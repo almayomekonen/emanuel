@@ -2,7 +2,11 @@
 <html lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://upload.wikimedia.org/wikipedia/commons/9/9a/Insurance_icon.png"
+    />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no, height=device-height"
@@ -11,28 +15,102 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="format-detection" content="telephone=no" />
-    <meta name="description" content="Your site description here" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <title>Vite + React</title>
-    <!-- Preload critical fonts -->
-    <link
-      rel="preload"
-      href="/fonts/your-main-font.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
+    <meta
+      name="description"
+      content="פתרונות ביטוח מקצועיים לאנשים פרטיים ולעסקים - ייעוץ ביטוחי אישי"
     />
-    <!-- Add Open Graph tags for better social sharing -->
-    <meta property="og:title" content="Your Site Title" />
-    <meta property="og:description" content="Your site description" />
-    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- Favicon settings for various platforms -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://upload.wikimedia.org/wikipedia/commons/9/9a/Insurance_icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://upload.wikimedia.org/wikipedia/commons/9/9a/Insurance_icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://upload.wikimedia.org/wikipedia/commons/9/9a/Insurance_icon.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/9/9a/Insurance_icon.png"
+      color="#4361ee"
+    />
+
+    <title>מאסטר של ביטוחים</title>
+
+    <!-- Enhanced Open Graph tags for better link previews -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.masterbithuah.co.il" />
+    <meta
+      property="og:title"
+      content="מאסטר של ביטוחים - פתרונות ביטוח מקצועיים"
+    />
+    <meta
+      property="og:description"
+      content="פתרונות ביטוח מקיפים לאנשים פרטיים ולעסקים. ייעוץ אישי ומקצועי, מחירים תחרותיים וליווי לאורך כל הדרך."
+    />
+    <meta
+      property="og:image"
+      content="https://upload.wikimedia.org/wikipedia/commons/9/9a/Insurance_icon.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="he_IL" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="מאסטר של ביטוחים - פתרונות ביטוח מקצועיים"
+    />
+    <meta
+      name="twitter:description"
+      content="פתרונות ביטוח מקיפים לאנשים פרטיים ולעסקים. ייעוץ אישי ומקצועי, מחירים תחרותיים וליווי לאורך כל הדרך."
+    />
+    <meta
+      name="twitter:image"
+      content="https://upload.wikimedia.org/wikipedia/commons/9/9a/Insurance_icon.png"
+    />
+
+    <!-- Structured data for rich results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "InsuranceAgency",
+        "name": "מאסטר של ביטוחים",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Insurance_icon.png",
+        "description": "פתרונות ביטוח מקיפים לאנשים פרטיים ולעסקים",
+        "url": "https://www.masterbithuah.co.il",
+        "telephone": "+972-XX-XXXXXXX",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "ישראל",
+          "addressRegion": "מרכז"
+        },
+        "openingHours": "Mo,Tu,We,Th,Su 09:00-18:00",
+        "priceRange": "₪₪"
+      }
+    </script>
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <!-- Fix for scroll issues -->
   </head>
   <body>
     <div id="root"></div>
     <!-- Add noscript fallback -->
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>אנא הפעל JavaScript כדי להשתמש באתר זה</noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
